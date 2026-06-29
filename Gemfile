@@ -36,6 +36,8 @@ gem 'spree_i18n'
 gem 'spree_stripe'
 gem 'spree_adyen'
 gem 'spree_paypal_checkout'
+gem 'spree_product_reviews', git: 'https://github.com/umeshravani/spree_product_reviews.git', branch: 'main'
+gem 'spree_razorpay_checkout', git: 'https://github.com/umeshravani/spree_razorpay.git', branch: 'main'
 
 # Rails & Infrastructure
 gem 'aws-sdk-s3', require: false
