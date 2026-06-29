@@ -34,7 +34,7 @@ end
 # Extensions
 gem 'spree_i18n'
 gem 'spree_stripe'
-gem 'spree_adyen'
+#gem 'spree_adyen'
 gem 'spree_paypal_checkout'
 gem 'spree_product_reviews', git: 'https://github.com/umeshravani/spree_product_reviews.git', branch: 'main'
 gem 'spree_razorpay_checkout', git: 'https://github.com/umeshravani/spree_razorpay.git', branch: 'main'
@@ -62,7 +62,7 @@ gem 'thruster', require: false
 gem 'turbo-rails'
 
 # Search
-gem 'meilisearch', '>= 0.28'
+#gem 'meilisearch', '>= 0.28'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[windows jruby]
