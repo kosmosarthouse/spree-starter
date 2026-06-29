@@ -26,7 +26,7 @@ if spree_path
     gem 'spree_api'
   end
 else
-  spree_version = '>= 5.5.0.rc3'
+  spree_version = '>= 5.5.1'
   gem 'spree', spree_version
   gem 'spree_admin', spree_version
 end
