@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/umeshravani/spree_product_reviews.git
-  revision: f6292c017471ca92e2fc953dbbe2ddae7a48033b
+  revision: 1418b25e007a29b4ae7d7dcf91abdc970b0a2f14
   branch: main
   specs:
     spree_product_reviews (1.2.0)
@@ -10,7 +10,7 @@ GIT
 
 GIT
   remote: https://github.com/umeshravani/spree_razorpay.git
-  revision: f534aee28d5a3111215b08a91c502028b64dded0
+  revision: c04450862b0ef011fbbcb73d65f4abe25e39cc42
   branch: main
   specs:
     spree_razorpay_checkout (0.3.3)
