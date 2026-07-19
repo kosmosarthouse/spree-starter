@@ -83,3 +83,4 @@ end
 group :development do
   gem 'web-console'
 end
+gem 'spree_posts', github: 'spree/spree-posts'

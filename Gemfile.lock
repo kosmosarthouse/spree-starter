@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/spree/spree-posts.git
+  revision: bd890ecc0ac71b0843953b034bc9fa4b2e78f724
+  specs:
+    spree_posts (1.0.0)
+      spree (>= 5.4.0.beta)
+      spree_admin (>= 5.4.0.beta)
+
+GIT
   remote: https://github.com/umeshravani/spree_product_reviews.git
   revision: 1418b25e007a29b4ae7d7dcf91abdc970b0a2f14
   branch: main
@@ -935,6 +943,7 @@ DEPENDENCIES
   spree_dev_tools
   spree_i18n
   spree_paypal_checkout
+  spree_posts!
   spree_product_reviews!
   spree_razorpay_checkout!
   spree_stripe
@@ -1210,6 +1219,7 @@ CHECKSUMS
   spree_extension (1.0.2) sha256=71725dafe45319a2be1bd2b564a416afe8029af8e18ac703bdb835e09553e1df
   spree_i18n (5.3.2) sha256=03b805235ca156644951f6bc3d07cbe43d0aa01134c4a27e3f3304011956f79b
   spree_paypal_checkout (0.7.1) sha256=89a5715a3b23b2ac04a27ddfd12416101fab03996cf70826d35dedef3bb4b9de
+  spree_posts (1.0.0)
   spree_product_reviews (1.2.0)
   spree_razorpay_checkout (0.3.3)
   spree_stripe (1.7.1) sha256=55d5846709fc43a0442068577fb0dc43bd25d14abf66352a37272e2ac4f95ce5
