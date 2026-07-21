@@ -14,6 +14,16 @@ Rails.application.routes.draw do
       path: :admin_user,
       router_name: :spree
     )
+
+    # Public read-only API for the Next.js storefront to fetch blog posts.
+    # spree_posts only ships admin management routes on its own.
+    namespace :api do
+      namespace :v3 do
+        namespace :store do
+          resources :posts, only: [:index, :show]
+        end
+      end
+    end
   end
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to
