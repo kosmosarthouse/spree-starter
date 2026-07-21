@@ -54,6 +54,7 @@ module Spree
               published_at: post.published_at,
               meta_title: post.meta_title,
               meta_description: post.meta_description,
+              image_url: post.image.attached? ? Rails.application.routes.url_helpers.url_for(post.image) : nil,
               category: post.respond_to?(:post_category) && post.post_category ? {
                 id: post.post_category.id,
                 title: post.post_category.title,
