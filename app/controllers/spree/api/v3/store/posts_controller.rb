@@ -10,22 +10,25 @@ module Spree
           # Reading posts is public — no login/API-key-only restriction
           # beyond whatever BaseController already enforces for the store.
           def index
-            posts = Spree::Post
+            page = (params[:page] || 1).to_i
+            limit = (params[:limit] || 25).to_i
+            offset = (page - 1) * limit
+
+            scope = Spree::Post
                       .where(store: current_store)
                       .where('published_at IS NOT NULL AND published_at <= ?', Time.current)
                       .order(published_at: :desc)
 
-            page = (params[:page] || 1).to_i
-            limit = (params[:limit] || 25).to_i
-            paginated = posts.page(page).per(limit)
+            total_count = scope.count
+            posts = scope.limit(limit).offset(offset)
 
             render json: {
-              data: paginated.map { |post| serialize_post(post) },
+              data: posts.map { |post| serialize_post(post) },
               meta: {
                 page: page,
                 limit: limit,
-                count: posts.count,
-                pages: paginated.total_pages
+                count: total_count,
+                pages: (total_count.to_f / limit).ceil
               }
             }
           end
