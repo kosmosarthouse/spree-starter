@@ -38,6 +38,7 @@ gem 'spree_stripe'
 gem 'spree_paypal_checkout'
 gem 'spree_product_reviews', git: 'https://github.com/umeshravani/spree_product_reviews.git', branch: 'main'
 gem 'spree_razorpay_checkout', git: 'https://github.com/umeshravani/spree_razorpay.git', branch: 'main'
+gem 'spree_google_products', git: 'https://github.com/umeshravani/spree_google_products', branch: 'main'
 gem 'spree_posts', github: 'spree/spree-posts'
 
 # Rails & Infrastructure
