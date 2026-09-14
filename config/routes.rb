@@ -21,9 +21,18 @@ Rails.application.routes.draw do
       namespace :v3 do
         namespace :store do
           resources :posts, only: [:index, :show]
+          # GET /api/v3/store/tracking/:id  (id = Spree order number, e.g. R043155873)
+          resources :tracking, only: [:show]
         end
       end
     end
+  end
+
+  # Inbound webhook from Velocity Shipping (see app/controllers/velocity/webhooks_controller.rb).
+  # Deliberately OUTSIDE Spree::Core::Engine.add_routes — this isn't a
+  # storefront/admin route, just a plain server-to-server receiver.
+  namespace :velocity do
+    resources :webhooks, only: [:create]
   end
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to
